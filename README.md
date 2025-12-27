@@ -2,8 +2,9 @@
 A beginner friendly, visual, practical SQL reference built from real-world queries.
 
 ---
-title: "MySQL Essentials: SQL in Practice"
-author: "Adriana Moreira"
+title: MySQL Essentials: SQL in Practice
+<p></p>
+author: Adriana Moreira
 ---
 
 ## Overview
