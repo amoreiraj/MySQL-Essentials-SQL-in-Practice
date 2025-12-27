@@ -1,0 +1,41 @@
+# Data Quality Check: NULL vs Empty Strings in SQL
+
+In SQL, `IS NULL` and `TRIM()` are commonly used together to perform **data quality checks**, especially to distinguish between **missing values** and **values that appear empty but are not truly NULL**.
+
+This distinction is critical in real-world datasets.
+
+---
+
+## TRIM() Function in SQL
+
+The `TRIM()` function removes unwanted whitespace from text values.
+
+By default, it removes:
+- Leading spaces (before the text)
+- Trailing spaces (after the text)
+
+This is particularly important when working with:
+- User input
+- Imported files (CSV, Excel, APIs)
+- Legacy databases
+
+Fields may look empty but actually contain spaces.
+
+---
+
+## NULL Values in SQL
+
+A `NULL` value represents the **absence of a value**.  
+It is different from an empty string (`''`) or a string containing spaces (`'   '`).
+
+To check for missing values, use `IS NULL`.
+
+---
+
+## Example Query
+
+```sql
+SELECT *
+FROM tutorial_billboard_top_100_year_end
+WHERE song_name IS NULL
+   OR TRIM(song_name) = '';
