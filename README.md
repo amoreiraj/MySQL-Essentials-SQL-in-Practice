@@ -1,5 +1,5 @@
 # MySQL-Essentials-SQL-in-Practice
-A beginner friendly, visual, practical SQL reference built from real-world queries.
+A beginner friendly, visual, practical SQL reference built from real world queries.
 
 ---
 title: MySQL Essentials: SQL in Practice
@@ -23,7 +23,7 @@ Rather than covering abstract theory, the examples are based on realistic datase
 
 ## Target Audience
 
-- SQL beginners using MySQL
+- SQL beginners to advanced using MySQL
 - Aspiring Data Analysts and Data Engineers
 - Professionals needing a practical SQL refresher
 
@@ -35,17 +35,17 @@ Rather than covering abstract theory, the examples are based on realistic datase
 
 This project uses the **Hotel Reservations Classification Dataset**, a realistic, publicly available dataset containing booking-level information such as arrival dates, room types, pricing, and booking status.
 
-The dataset represents **one row per reservation**, which makes it well suited for practicing real-world SQL queries related to filtering, aggregation, data quality checks, and debugging scenarios.
+The dataset represents **one row per reservation**, which makes it well suited for practicing real world SQL queries related to filtering, aggregation, data quality checks, and debugging scenarios.
 
 ### Database and Table Structure
 
-All examples in this repository are based on a single MySQL table:
+All examples in this repository are based on the Schema `hotel`:
 
 - **Schema (database):** `hotel`  
 - **Table:** `hotel_reservations`
 
-The table is intentionally **denormalized** to support learning and practical querying.  
-This mirrors how data is often exposed in analytics, reporting, and BI layers, where simplicity and query efficiency are prioritized.
+The table 'hotel_reservations' used for SQL basics and most of the SQL intermediate are intentionally **denormalised** to support learning and practical querying.  
+This mirrors how data is often exposed in analytics, reporting, and BI layers, where simplicity and query efficiency are prioritised.
 
 ### Data Import Process
 
@@ -57,12 +57,12 @@ Import details:
 - Records imported: **36,275**
 - Table created automatically during import: `hotel.hotel_reservations`
 
-This approach reflects a common real-world workflow for loading CSV data into MySQL for exploration and analysis.
+This approach reflects a common real world workflow for loading CSV data into MySQL for exploration and analysis.
 
 ### Notes on Design Choices
 
 - A single wide table (`hotel_reservations`) is used throughout the **SQL BASICS** section to keep the focus on SQL syntax and logic.
-- The goal is not to demonstrate perfect normalization, but to show how SQL is actually used day-to-day when working with existing datasets.
+- The goal is not to demonstrate perfect normalisation, but to show how SQL is actually used day-to-day when working with existing datasets.
 - More advanced sections may introduce derived structures (such as views or additional tables) while preserving this base table for continuity.
 
 ---
@@ -72,17 +72,11 @@ This approach reflects a common real-world workflow for loading CSV data into My
 ```text
 .
 ├── SQL_BASICS/        # Core SQL fundamentals using a real dataset
+├── SQL Intermediate/  # In construction
+├── SQL Advanced/      # In construction
 ├── datasets/          # Raw datasets used in the project
 ├── visuals/           # Screenshots, tables, and diagrams
 └── README.md          # Project documentation
 
 
-## Project Structure
-
-```text
-.
-├── datasets/        # Sample datasets used in queries
-├── queries/         # SQL examples grouped by topic
-├── visuals/         # Screenshots, tables, and diagrams
-└── README.Rmd       # Project documentation
 
